@@ -1,0 +1,20 @@
+{
+  "name": "node-cluster-with-load-balancer",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "simple": "node src/server.js",
+    "simple-test": "node src/server.js test",
+    "cluster": "node src/cluster.js",
+    "cluster-test": "node src/cluster.js test",
+    "cluster-lb": "node src/cluster.js load-balancer",
+    "cluster-lb-test": "node src/cluster.js load-balancer test",
+    "test": "npx autocannon -c 500 -d 30 --workers 10 --renderStatusCodes --latency --warmup [ -c 1 -d 2 ] localhost:3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autocannon": "^7.14.0"
+  }
+}
